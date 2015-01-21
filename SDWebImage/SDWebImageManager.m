@@ -212,7 +212,7 @@
 
                             if (transformedImage && finished) {
                                 BOOL imageWasTransformed = ![transformedImage isEqual:downloadedImage];
-                                [self.imageCache storeImage:transformedImage recalculateFromImage:imageWasTransformed imageData:data forKey:key toDisk:cacheOnDisk];
+                                [self.imageCache storeImage:transformedImage recalculateFromImage:imageWasTransformed imageData:nil forKey:key toDisk:cacheOnDisk];
                             }
 
                             dispatch_main_sync_safe(^{
